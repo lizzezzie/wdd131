@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --accent-color: #007bff;
+    --background-color: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 100;
+}

@@ -3,14 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Elizabeth Njoroge</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals student page by Elizabeth Njoroge. Showcasing responsive design, JavaScript, and web development skills.">
+    <meta name="author" content="Elizabeth Njoroge">
+    <link rel="stylesheet" href="styles/base.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to WDD 131</h1>
-    <p>This is a simple HTML document to demonstrate the structure of a web page.</p>
-    <p>Feel free to explore and modify this code!</p>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/ezzie-liz-767858373">Linkedin</a></li>
+                <li><a href="https://byupw.instructure.com/.">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Elizabeth Njoroge</h1>
+        <section class="card">
+            <h2>About me</h2>
+            <img src="images/ElizabethNjoroge.jpg" alt="Elizabeth Njoroge smiling" width="200" height="200">
+            <p>My name is Elizabeth Njoroge, I am a student at Brigham Young University - Idaho. I am studying Web Design and Development.</p>
+        </section>
+        <section class="card">
+            <h2>My Home Town</h2>
+            <img src="images/Nairobi.jpg" alt="Nairobi skyline at sunset" width="200" height="200">
+            <p>Nairobi is the capital city of Kenya. It is known for its rich culture, diverse wildlife, and vibrant economy. The city is a hub for technology and innovation in Africa.</p>
+        </section>
+    </main> 
+
     <footer>
-        <p>&copy; 2023 WDD 131</p>
+        <p>&copy; <span id="currentyear"></span> Elizabeth Njoroge | Kenya</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
