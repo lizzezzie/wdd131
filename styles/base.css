@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #222;
-    --secondary-color: #444;
-    --accent-color: #007bff;
-    --background-color: #fff;
+    --primary-color: #2d3436;
+    --secondary-color: #4b5563;
+    --accent-color: #0984e3;
+    --background-color: #fcfcfc;
 }
 
 body {
@@ -11,6 +11,12 @@ body {
     background-color: var(--background-color);
     color: var(--primary-color);
     line-height: 1.6;
+}
+
+header {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-bottom: 1px solid #bbb;
 }
 
 /*  headings  */
@@ -84,9 +90,10 @@ main {
 /*  footer  */
 footer {
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
-    background-color: #f2f2f2;
-    font-size: 0.9rem;
+    background-color: var(--background-color);
+    font-size: 0.95rem;
     color: var(--secondary-color);
+    border-top: 1px solid #e2e8f0;
 }
