@@ -32,8 +32,9 @@ article p {
 }
 
 .callout {
-	color: #777;
-	background-color: #702963;
+	color: #fcfcfc;
+	background-color: #050505;
+    padding: 1rem;
 }
 
 footer {
