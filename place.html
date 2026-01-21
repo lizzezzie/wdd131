@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Place</title>
-    <meta name="description" content="Place page for WDD 131.">
+    <meta name="description" content="A featured place with weather and details.">
     <meta name="author" content="Elizabeth Njoroge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +15,40 @@
 </head>
 <body>
     <header>
-        <h1>Place</h1>
+        <h1>Jerusalem</h1>
     </header>
+
     <main>
-        <section>
-            <h2>Jerusalem</h2>
-            <p>Jerusalem is a city in the Middle East, located in the region of Palestine.</p>
+
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 900px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+                <img src="images/hero-small.webp" alt="Landscape of Jerusalem cityscape during sunset">
+            </picture>
         </section>
+        
+        <section class="info">
+            <h2>About</h2>
+            <p>
+            Jerusalem is a city in the Middle East, located in the region known as the Levant. It is one of the oldest cities in the world, with a history that dates back thousands of years. Jerusalem is considered a holy city by three major religions: Judaism, Christianity, and Islam. It is home to many important religious sites, including the Western Wall, the Church of the Holy Sepulchre, and the Al-Aqsa Mosque.
+            </p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+
+            <div class="weather-grid">
+              <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+
+              <ul>
+                <li>Temperature: <span id="temperature">9</span> °C</li>
+                <li>Wind Speed: <span id="windSpeed">10</span> km/h</li>
+                <li>Wind Chill: <span id="windChill"></span></li>
+              </ul>
+            </div>
+        </section>
+
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> Elizabeth Njoroge | Kenya</p>
