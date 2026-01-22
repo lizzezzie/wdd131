@@ -55,19 +55,3 @@ footer {
   padding: 1rem;
 }
 
-/* Large view */
-@media (min-width: 700px) {
-
-  .weather h2::after {
-    content: " ⛅";
-  }
-
-  .weather-icon {
-    display: none;
-  }
-
-  main {
-    max-width: 1000px;
-    margin: auto;
-  }
-}
