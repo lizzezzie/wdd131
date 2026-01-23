@@ -1,6 +1,7 @@
 :root {
-  --primary-color: #c8102e;
-  --secondary-color: #007a3d;
+  --primary-color: #000000;      
+  --secondary-color: #c8102e;
+  --accent-color: #007a3d;
   --text-color: #222;
   --background-color: #ffffff;
 }
@@ -10,6 +11,7 @@
 }
 
 body {
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   color: var(--text-color);
@@ -17,10 +19,11 @@ body {
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: white;
   padding: 1rem;
   text-align: center;
+  border-bottom: 10px solid var(--accent-color);
 }
 
 .hero img {
@@ -37,6 +40,18 @@ section {
   margin-bottom: 2rem;
 }
 
+.info {
+  background-color: var(--card-bg);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
+.weather {
+  background-color: var(--card-bg);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+}
+
 .weather-grid {
   display: flex;
   gap: 1rem;
@@ -48,10 +63,21 @@ section {
   height: auto;
 }
 
+.weather ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather li {
+  margin-bottom: 0.5rem;
+}
+
 footer {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 1rem;
+  border-top: 10px solid var(--accent-color);
 }
 
