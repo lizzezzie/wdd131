@@ -1,6 +1,6 @@
 @media (min-width: 700px) {
   
-  /* Fix hero height */
+  
   .hero img {
     height: 500px;
     object-fit: cover;
