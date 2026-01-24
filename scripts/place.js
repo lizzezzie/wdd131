@@ -10,8 +10,11 @@ function calculateWindChill(temp, speed) {
   ).toFixed(1);
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+const yearSpan = document.getElementById("year");
+yearSpan.textContent = new Date().getFullYear();
+
+const lastModified = document.getElementById("lastModified");
+lastModified.textContent = `Last Modified: ${document.lastModified}`;
 
 const windChillElement = document.getElementById("windChill");
 
