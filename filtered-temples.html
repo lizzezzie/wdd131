@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temple Photo Album</title>
+    <meta name="description" content="Explore a stunning collection of temples around the world. Discover the architectural beauty and spiritual significance of these sacred global sites.">
+    <meta name="author" content="Elizabeth Njoroge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menuBtn" aria-label="Toggle Navigation Menu">☰</button>
+
+        <nav id="navMenu" class="hide">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+         <h2>Temples Around the World</h2>
+
+    <section class="temple-grid">
+      <figure>
+        <img src="images/abidjan.jpg" alt="Abidjan Ivory Coast Temple">
+        <figcaption>Abidjan</figcaption>
+      </figure>
+      <figure>
+        <img src="images/bankok.jpg" alt="Bangkok Thailand Temple">
+        <figcaption>Bankok</figcaption>
+      </figure>
+      <figure>
+        <img src="images/belem-brazil.jpg" alt="Belem Brazil Temple">
+        <figcaption>Belem Brazil</figcaption>
+      </figure>
+      <figure>
+        <img src="images/bern-switzerland.jpg" alt="Bern Switzerland Temple">
+        <figcaption>Bern Switzerland</figcaption>
+      </figure>
+      <figure>
+        <img src="images/bogota-colombia.jpg" alt="Bogota Colombia Temple">
+        <figcaption>Bogota Colombia</figcaption>
+      </figure>
+      <figure>
+        <img src="images/orem-utah.jpg" alt="Orem Utah Temple">
+        <figcaption>Orem Utah</figcaption>
+      </figure>
+      <figure>
+        <img src="images/provo-utah.jpg" alt="Provo Utah Temple">
+        <figcaption>Provo Utah</figcaption>
+      </figure>
+      <figure>
+        <img src="images/saltlake.jpg" alt="Salt Lake Temple">
+        <figcaption>Salt Lake</figcaption>
+      </figure>
+      <figure>
+        <img src="images/gilbert.jpg" alt="Gibert Arizona Temple">
+        <figcaption>Gilbert</figcaption>
+      </figure>
+    </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Elizabeth Njoroge | Kenya</p>
+        <p> Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>
