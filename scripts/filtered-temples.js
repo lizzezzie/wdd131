@@ -86,6 +86,14 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-lds-273999-wallpaper.jpg"
   },
+  {
+    templeName: "Kyiv Ukraine",
+    location: "Kyiv, Ukraine",
+    dedicated: "2010, August, 29",
+    area: 5000,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x250/kyiv-ukraine-temple-lds-273999-wallpaper.jpg"
+  }
 ];
 
 // Footer dynamic year
