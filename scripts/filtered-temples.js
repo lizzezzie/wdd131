@@ -124,6 +124,10 @@ function displayTemples(templeArray) {
   });
 }
 
+//filter buttons
+
+
+
 // Footer dynamic year
 const yearSpan = document.getElementById('currentyear');
 const currentYear = new Date().getFullYear();
