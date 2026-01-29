@@ -13,6 +13,8 @@ menuButton.addEventListener('click', () => {
   }
 });
 
+// Temple data
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -95,6 +97,32 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x250/kyiv-ukraine-temple-lds-273999-wallpaper.jpg"
   }
 ];
+// Function to display temples
+const templeContainer = document.getElementById("temples");
+
+function displayTemples(templeArray) {
+  templeContainer.innerHTML = "";
+
+  templeArray.forEach(temple => {
+    const card = document.createElement("figure");
+
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = temple.templeName;
+    img.loading = "lazy";
+
+    const caption = document.createElement("figcaption");
+    caption.innerHTML = `
+      <strong>${temple.templeName}</strong><br>
+      ${temple.location}<br>
+      Dedicated: ${temple.dedicated}<br>
+      Area: ${temple.area.toLocaleString()} sq ft
+    `;
+    card.appendChild(img);
+    card.appendChild(caption);
+    templeContainer.appendChild(card);
+  });
+}
 
 // Footer dynamic year
 const yearSpan = document.getElementById('currentyear');
