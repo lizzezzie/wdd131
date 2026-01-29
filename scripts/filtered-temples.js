@@ -77,44 +77,23 @@ const temples = [
   {
     templeName: "Tokyo Japan",
     location: "Tokyo, Japan",
-    dedicated: "2017-04-14",
-    area: 5000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-1416671-wallpaper.jpg"
+    dedicated: "1980-10-29",
+    area: 53997 ,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
   },
   {
     templeName: "Bern Switzerland",
     location: "Bern, Switzerland",
-    dedicated: "2017-04-14",
-    area: 5000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-1416671-wallpaper.jpg"
+    dedicated: "1955-09-15",
+    area: 35546,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bern-switzerland-temple/bern-switzerland-temple-54641-main.jpg"
   },
   {
     templeName: "Kyiv Ukraine",
     location: "Kyiv, Ukraine",
     dedicated: "2010-08-29",
-    area: 5000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x250/kyiv-ukraine-temple-1416671-wallpaper.jpg"
-  },
-  {
-    templeName: "Tokyo Japan",
-    location: "Tokyo, Japan",
-    dedicated: "2017-04-14",
-    area: 5000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-1416671-wallpaper.jpg"
-  },
-  {
-    templeName: "Bern Switzerland",
-    location: "Bern, Switzerland",
-    dedicated: "2017-04-14",
-    area: 5000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-1416671-wallpaper.jpg"
-  },
-  {
-    templeName: "Kyiv Ukraine",
-    location: "Kyiv, Ukraine",
-    dedicated: "2010-08-29",
-    area: 5000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x250/kyiv-ukraine-temple-1416671-wallpaper.jpg"
+    area: 22184,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/134-Kyiv-Ukraine-Temple.jpg"
   }
   ];
 
