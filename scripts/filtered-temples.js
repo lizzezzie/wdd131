@@ -1,5 +1,4 @@
 // Toggle hamburger menu visibility
-
 const menuButton = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
@@ -7,8 +6,7 @@ menuButton.addEventListener('click', () => {
   navMenu.classList.toggle('hide');
 
   // Toggle between ☰ and ✖ symbol
-
-  if (menuButton.textContent === '☰') {
+ if (menuButton.textContent === '☰') {
     menuButton.textContent = '✖';
   } else {
     menuButton.textContent = '☰';
@@ -16,7 +14,6 @@ menuButton.addEventListener('click', () => {
 });
 
 // Temple data
-
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -96,11 +93,10 @@ const temples = [
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/134-Kyiv-Ukraine-Temple.jpg"
   }
   ];
-
-// Function to display temples
-
+// Container for temple cards
 const templeContainer = document.getElementById("temples");
 
+// Function to display temples
 function displayTemples(templeArray) {
   templeContainer.innerHTML = "";
 
@@ -125,44 +121,18 @@ function displayTemples(templeArray) {
   });
 }
 
-//filter buttons
-document.getElementById("home").addEventListener("click", () => {
-  displayTemples(temples);
-});
-
-document.getElementById("old").addEventListener("click", () => {
-  displayTemples(
-    temples.filter(t => new Date(t.dedicated).getFullYear() < 1900)
-  );
-});
-
-document.getElementById("new").addEventListener("click", () => {
-  displayTemples(
-    temples.filter(t => new Date(t.dedicated).getFullYear() > 2000)
-  );
-});
-
-document.getElementById("large").addEventListener("click", () => {
-  displayTemples(
-    temples.filter(t => t.area > 90000)
-  );
-});
-
-document.getElementById("small").addEventListener("click", () => {
-  displayTemples(
-    temples.filter(t => t.area < 10000)
-  );
-});
+// Filter buttons
+document.getElementById("home").addEventListener("click", () => displayTemples(temples));
+document.getElementById("old").addEventListener("click", () => displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900)));
+document.getElementById("new").addEventListener("click", () => displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000)));
+document.getElementById("large").addEventListener("click", () => displayTemples(temples.filter(t => t.area > 90000)));
+document.getElementById("small").addEventListener("click", () => displayTemples(temples.filter(t => t.area < 10000)));
 
 
-// Footer dynamic year
-const yearSpan = document.getElementById('currentyear');
-const currentYear = new Date().getFullYear();
-yearSpan.textContent = currentYear;
+// Footer year and last modified
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
 
-// Footer last modified
-const lastModifiedSpan = document.getElementById('lastModified');
-lastModifiedSpan.textContent = document.lastModified;
 
 // Initial display of all temples
 displayTemples(temples);
