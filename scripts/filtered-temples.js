@@ -1,4 +1,5 @@
 // Toggle hamburger menu visibility
+
 const menuButton = document.getElementById('menuBtn');
 const navMenu = document.getElementById('navMenu');
 
@@ -6,6 +7,7 @@ menuButton.addEventListener('click', () => {
   navMenu.classList.toggle('hide');
 
   // Toggle between ☰ and ✖ symbol
+
   if (menuButton.textContent === '☰') {
     menuButton.textContent = '✖';
   } else {
@@ -125,7 +127,33 @@ function displayTemples(templeArray) {
 }
 
 //filter buttons
+document.getElementById("home").addEventListener("click", () => {
+  displayTemples(temples);
+});
 
+document.getElementById("old").addEventListener("click", () => {
+  displayTemples(
+    temples.filter(t => new Date(t.dedicated).getFullYear() < 1900)
+  );
+});
+
+document.getElementById("new").addEventListener("click", () => {
+  displayTemples(
+    temples.filter(t => new Date(t.dedicated).getFullYear() > 2000)
+  );
+});
+
+document.getElementById("large").addEventListener("click", () => {
+  displayTemples(
+    temples.filter(t => t.area > 90000)
+  );
+});
+
+document.getElementById("small").addEventListener("click", () => {
+  displayTemples(
+    temples.filter(t => t.area < 10000)
+  );
+});
 
 
 // Footer dynamic year
@@ -136,3 +164,6 @@ yearSpan.textContent = currentYear;
 // Footer last modified
 const lastModifiedSpan = document.getElementById('lastModified');
 lastModifiedSpan.textContent = document.lastModified;
+
+// Initial display of all temples
+displayTemples(temples);
