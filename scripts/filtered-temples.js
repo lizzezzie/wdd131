@@ -76,7 +76,7 @@ const temples = [
     location: "Tokyo, Japan",
     dedicated: "1980-10-29",
     area: 53997 ,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-8154.jpg"
   },
   {
     templeName: "Bern Switzerland",
@@ -105,8 +105,10 @@ function displayTemples(templeArray) {
 
     const img = document.createElement("img");
     img.src = temple.imageUrl;
-    img.alt = temple.templeName;
+    img.alt = `${temple.templeName} Temple`;
     img.loading = "lazy";
+    img.width = 400;
+    img.height = 250;
 
     const caption = document.createElement("figcaption");
     caption.innerHTML = `
