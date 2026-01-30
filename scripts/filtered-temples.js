@@ -93,15 +93,15 @@ const temples = [
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/134-Kyiv-Ukraine-Temple.jpg"
   }
   ];
-// Container for temple cards
+// Temple container
 const templeContainer = document.getElementById("temples");
 
-// Function to display temples
-function displayTemples(templeArray) {
+// Display temples
+function displayTemples(list) {
   templeContainer.innerHTML = "";
 
-  templeArray.forEach(temple => {
-    const card = document.createElement("figure");
+  list.forEach(temple => {
+    const figure = document.createElement("figure");
 
     const img = document.createElement("img");
     img.src = temple.imageUrl;
@@ -110,6 +110,7 @@ function displayTemples(templeArray) {
     img.width = 400;
     img.height = 250;
 
+
     const caption = document.createElement("figcaption");
     caption.innerHTML = `
       <strong>${temple.templeName}</strong><br>
@@ -117,19 +118,37 @@ function displayTemples(templeArray) {
       Dedicated: ${temple.dedicated}<br>
       Area: ${temple.area.toLocaleString()} sq ft
     `;
-    card.appendChild(img);
-    card.appendChild(caption);
-    templeContainer.appendChild(card);
+
+    figure.appendChild(img);
+    figure.appendChild(caption);
+    templeContainer.appendChild(figure);
   });
 }
+// Filter handlers with preventDefault
+document.getElementById("home").addEventListener("click", e => {
+  e.preventDefault();
+  displayTemples(temples);
+});
 
-// Filter buttons
-document.getElementById("home").addEventListener("click", () => displayTemples(temples));
-document.getElementById("old").addEventListener("click", () => displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900)));
-document.getElementById("new").addEventListener("click", () => displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000)));
-document.getElementById("large").addEventListener("click", () => displayTemples(temples.filter(t => t.area > 90000)));
-document.getElementById("small").addEventListener("click", () => displayTemples(temples.filter(t => t.area < 10000)));
+document.getElementById("old").addEventListener("click", e => {
+  e.preventDefault();
+  displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900));
+});
 
+document.getElementById("new").addEventListener("click", e => {
+  e.preventDefault();
+  displayTemples(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000));
+});
+
+document.getElementById("large").addEventListener("click", e => {
+  e.preventDefault();
+  displayTemples(temples.filter(t => t.area > 90000));
+});
+
+document.getElementById("small").addEventListener("click", e => {
+  e.preventDefault();
+  displayTemples(temples.filter(t => t.area < 10000));
+});
 
 // Footer year and last modified
 document.getElementById('currentyear').textContent = new Date().getFullYear();
