@@ -21,7 +21,7 @@ const temples = [
     dedicated: "2005-08-07",
     area: 11500,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    "images/aba-nigeria.webp"
   },
   {
     templeName: "Manti Utah",
@@ -29,7 +29,7 @@ const temples = [
     dedicated: "1888-05-21",
     area: 74792,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    "images/manti-utah.webp"
   },
   {
     templeName: "Payson Utah",
@@ -37,7 +37,7 @@ const temples = [
     dedicated: "2015-06-07",
     area: 96630,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    "images/payson-utah.webp"
   },
   {
     templeName: "Yigo Guam",
@@ -45,7 +45,7 @@ const temples = [
     dedicated: "2020-05-02",
     area: 6861,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    "images/yigo-guam.webp"
   },
   {
     templeName: "Washington D.C.",
@@ -53,7 +53,7 @@ const temples = [
     dedicated: "1974-11-19",
     area: 156558,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    "images/washington-dc.webp"
   },
   {
     templeName: "Lima Perú",
@@ -61,7 +61,7 @@ const temples = [
     dedicated: "1986-01-10",
     area: 9600,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    "images/lima-peru.webp"
   },
   {
     templeName: "Mexico City Mexico",
@@ -69,29 +69,31 @@ const temples = [
     dedicated: "1983-12-02",
     area: 116642,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  {
-    templeName: "Tokyo Japan",
-    location: "Tokyo, Japan",
-    dedicated: "1980-10-29",
-    area: 53997 ,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-8154.jpg"
+    "images/mexico-city-mexico.webp"
   },
   {
     templeName: "Bern Switzerland",
     location: "Bern, Switzerland",
     dedicated: "1955-09-15",
     area: 35546,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bern-switzerland-temple/bern-switzerland-temple-54641-main.jpg"
+    imageUrl: "images/bern-switzerland.webp"
   },
   {
     templeName: "Kyiv Ukraine",
     location: "Kyiv, Ukraine",
     dedicated: "2010-08-29",
     area: 22184,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/134-Kyiv-Ukraine-Temple.jpg"
-  }
+    imageUrl: "images/kyiv-ukraine.webp"
+  },
+  {
+    templeName: "Tokyo Japan",
+    location: "Tokyo, Japan",
+    dedicated: "1980-10-29",
+    area: 53997 ,
+    imageUrl: "images/tokyo-japan.webp"
+  },
+
+  
   ];
 // Temple container
 const templeContainer = document.getElementById("temples");
@@ -109,7 +111,6 @@ function displayTemples(list) {
     img.loading = "lazy";
     img.width = 400;
     img.height = 250;
-
 
     const caption = document.createElement("figcaption");
     caption.innerHTML = `
