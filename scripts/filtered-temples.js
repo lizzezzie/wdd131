@@ -98,7 +98,7 @@ const templeContainer = document.getElementById("temples");
 
 // Display temples
 function displayTemples(list) {
-  templeContainer.innerHTML = "";
+  const fragment = document.createDocumentFragment();
 
   list.forEach(temple => {
     const figure = document.createElement("figure");
@@ -121,9 +121,13 @@ function displayTemples(list) {
 
     figure.appendChild(img);
     figure.appendChild(caption);
-    templeContainer.appendChild(figure);
+    fragment.appendChild(figure);
   });
-}
+
+  templeContainer.innerHTML = '';
+    templeContainer.appendChild(fragment);
+  }
+
 // Filter handlers with preventDefault
 document.getElementById("home").addEventListener("click", e => {
   e.preventDefault();
