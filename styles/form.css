@@ -1,0 +1,64 @@
+:root {
+  --primary: #2c3e50;
+  --accent: #3498db;
+  --background: #f4f6f8;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+header, footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+}
+
+.form-group, fieldset {
+  margin-bottom: 1.25rem;
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+fieldset label {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+input[type="submit"] {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.9;
+}

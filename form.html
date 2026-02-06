@@ -9,12 +9,103 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
 
-    
+<main>
+   <form method="get" action="review.html">
+
+    <div class="form-group">
+      <label for="product">Product Name</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+    </div>
+
+    <fieldset class="form-group">
+      <legend>Overall Rating</legend>
+
+      <label>
+        <input type="radio" name="rating" value="1" required>
+        ☆
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="2">
+        ☆☆
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="3">
+        ☆☆☆
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="4">
+        ☆☆☆☆
+      </label>
+
+      <label>
+        <input type="radio" name="rating" value="5">
+        ☆☆☆☆☆
+      </label>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="install-date">Date of Installation</label>
+      <input type="date" id="install-date" name="install-date" required>
+    </div>
+
+    <fieldset class="form-group">
+      <legend>Useful Features</legend>
+
+      <label>
+        <input type="checkbox" name="features" value="durability">
+        Durability
+      </label>
+
+      <label>
+        <input type="checkbox" name="features" value="ease-of-use">
+        Ease of Use
+      </label>
+
+      <label>
+        <input type="checkbox" name="features" value="performance">
+        Performance
+      </label>
+
+      <label>
+        <input type="checkbox" name="features" value="design">
+        Design
+      </label>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="review">Written Review</label>
+      <textarea id="review" name="review" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="username">Your Name</label>
+      <input type="text" id="username" name="username">
+    </div>
+
+    <div class="form-group">
+      <input type="submit" value="Submit Review">
+    </div>
+
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2026 | Product Reviews</p>
+</footer>
+    </form>
 </body>
 </html>
