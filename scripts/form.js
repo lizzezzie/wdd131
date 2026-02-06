@@ -8,11 +8,10 @@ const products = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Populate product select ---
-  const productSelect = document.querySelector("#product");
-  if (!productSelect) {
-    console.warn("Product select not found.");
-  } else {
+
+  // Populate product select
+  const productSelect = document.getElementById("product");
+  if (productSelect) {
     products.forEach(product => {
       const option = document.createElement("option");
       option.value = product.id;
@@ -21,17 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Update current year ---
+  // Footer year
   const yearSpan = document.getElementById("currentyear");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  
+  // Footer last modified
   const lastModifiedP = document.getElementById("lastModified");
   if (lastModifiedP) {
-    const lastModDate = new Date(document.lastModified);
     lastModifiedP.textContent =
-      "Last modified: " + lastModDate.toLocaleDateString() + " " + lastModDate.toLocaleTimeString();
+      "Last modified: " + document.lastModified;
   }
+
 });
+
