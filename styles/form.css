@@ -1,7 +1,7 @@
 :root {
   --primary: #29054f;
   --accent: #0d3b59;
-  --background: #f4f6f8;
+  --background: #e1c1ff;
 }
 
 body {
@@ -48,6 +48,7 @@ textarea {
 fieldset label {
   display: inline-block;
   margin-right: 1rem;
+  background-color: bisque;
 }
 
 input[type="submit"] {
