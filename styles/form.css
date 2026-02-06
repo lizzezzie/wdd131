@@ -1,6 +1,6 @@
 :root {
   --primary: #29054f;
-  --accent: #3498db;
+  --accent: #0d3b59;
   --background: #f4f6f8;
 }
 
@@ -21,7 +21,7 @@ header, footer {
 main {
   max-width: 600px;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 2rem;
   background: white;
   border-radius: 6px;
 }
