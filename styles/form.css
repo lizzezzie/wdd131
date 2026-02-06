@@ -1,65 +1,138 @@
 :root {
-  --primary: #29054f;
-  --accent: #0d3b59;
-  --background: #e1c1ff;
+  --primary-color: #2c3e50;
+  --accent-color: #1e88e5;
+  --background-color: #f5f7fa;
+  --border-color: #dcdfe3;
+  --text-color: #1f2933;
+}
+
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   margin: 0;
-  background-color: var(--background);
-  color: var(--primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
 }
 
-header, footer {
-  background-color: var(--primary);
-  color: white;
+/* Header and Footer */
+header,
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
   text-align: center;
   padding: 1rem;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Main Layout */
 main {
-  max-width: 600px;
+  max-width: 680px;
   margin: 2rem auto;
-  padding: 2rem;
-  background: white;
+  padding: 1.5rem;
+  background-color: #ffffff;
   border-radius: 6px;
 }
 
-.form-group, fieldset {
-  margin-bottom: 1.25rem;
-  border: none;
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
+fieldset.form-group {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+
+/* Labels */
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
 }
 
+/* Text Inputs */
 input[type="text"],
 input[type="date"],
 select,
 textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.55rem;
   font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
 }
 
-fieldset label {
+textarea {
+  resize: vertical;
+}
+
+/* Focus States */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Radio and Checkbox Groups */
+fieldset.form-group input[type="radio"],
+fieldset.form-group input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+fieldset.form-group input[type="radio"] + label,
+fieldset.form-group input[type="checkbox"] + label {
   display: inline-block;
   margin-right: 1rem;
-  background-color: bisque;
+  font-weight: normal;
+  cursor: pointer;
 }
 
+/* Rating stars spacing */
+fieldset.form-group input[type="radio"] + label {
+  font-size: 1.2rem;
+}
+
+/* Submit Button */
 input[type="submit"] {
-  background-color: var(--accent);
-  color: white;
+  background-color: var(--accent-color);
+  color: #ffffff;
   border: none;
-  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  padding: 0.75rem 1.75rem;
   font-size: 1rem;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
   opacity: 0.9;
+}
+
+/* Responsive Enhancement */
+@media (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
 }
