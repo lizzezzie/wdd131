@@ -21,26 +21,42 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li> 
     </ul>
   </nav>
 </header>
 
-<main>
-
-<section>
-  <h2>Our Services</h2>
-  <div id="services-list" class="grid"></div>
+<section class="hero">
+  <img src="images/hero.webp" alt="laundry hero image">
+  <div class="hero-text"> 
+  <h2>Clean Clothes, Happy Life</h2> 
+  <p>Urban Spin Laundry provides fast, reliable, and professional laundry services in Nakuru.</p>
+</div>
 </section>
 
-<section>
+
+<main class="service-page">
+  <section>
+  <h2>Our Services</h2>
+  <p>We offer a variety of laundry services to meet your needs:</p>
+  <ul>
+    <li>Wash & Fold -  from 90 Ksh/kg</li>
+    <li>Duvets & Bedding - priced by size and material</li>
+    <li>Stain Treatment - add-on service for delicate or tough stains</li>
+    <li>Ironing & Pressing - optional convinience service</li>
+    <li>Pickup & Delivery - optional convinience service</li>
+  </ul>
+  <p>Questions about our services or pricing? <a href="contact.html">Contact us</a> for more information.</p> 
+  </section>
+
+<section class="estimator">
   <h2>Turnaround Time Estimator</h2>
 
   <label for="service-select">Select a service:</label>
   <select id="service-select">
     <option value="">-- Choose a service --</option>
     <option value="Wash & Fold">Wash & Fold</option>
-    <option value="Wash, Dry & Iron">Wash, Dry & Iron</option>
+    <option value="Wash, Dry & Iron">Wash & Iron</option>
     <option value="Ironing Only">Ironing Only</option>
     <option value="Duvets & Bedding">Duvets & Bedding</option>
   </select>

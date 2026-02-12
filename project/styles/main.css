@@ -41,6 +41,7 @@ nav a {
   font-weight: 600;
 }
 
+/* ===== Hero Section ===== */
 .hero {
   position: relative;
   width: 100%;
@@ -56,19 +57,22 @@ nav a {
 .hero-text {
   position: static;
   background-color: #ffffff;
-  color: var(--text-color--);
+  color: var(--text-color); /* fixed typo */
   padding: 1rem;
   text-align: center;
 }
+
 .hero-text h2 {
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
+
 .hero-text p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
 
+/* ===== Main & Sections ===== */
 main {
   padding: 1.5rem;
 }
@@ -84,6 +88,8 @@ h2, h3 {
   font-family: "Poppins", sans-serif;
   color: var(--primary-color);
 }
+
+/* ===== Contact Info ===== */
 .contact-info {
   background-color: #f5f7fa;
   padding: 2rem;
@@ -106,7 +112,7 @@ h2, h3 {
   text-decoration: underline;
 }
 
-
+/* ===== Buttons ===== */
 .button {
   display: inline-block;
   padding: 0.6rem 1rem;
@@ -117,6 +123,7 @@ h2, h3 {
   font-weight: 600;
 }
 
+/* ===== Footer ===== */
 footer {
   background-color: var(--primary-color);
   color: #ffffff;
@@ -124,16 +131,57 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
 footer a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive */
+/* ===== Service Page Styling ===== */
+.service-page {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-page h2 {
+  color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.service-page p,
+.service-page li {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.service-page ul {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+}
+
+.service-page li + li {
+  margin-top: 0.6rem;
+}
+
+.service-page a {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.service-page a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive Hero ===== */
 @media (min-width: 768px) {
 
   .hero {
@@ -156,9 +204,14 @@ footer a:hover {
     max-width: 650px;
     border-radius: 8px;
   }
+
   .hero-text h2 {
     color: #ffffff;
   }
-
+  
+ /* hide hero card content on small screens */
+  .hero-text {
+    display: block;
+  }
 }
 
