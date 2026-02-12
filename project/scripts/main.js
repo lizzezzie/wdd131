@@ -21,7 +21,7 @@ const services = [
   {
     name: "Duvets & Bedding",
     pricePerKg: 0,
-    turnaround: "2–3 days",
+    turnaround: "1–3 days",
     notes: "Final price depends on size and material."
   }
 ];
