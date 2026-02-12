@@ -180,6 +180,34 @@ footer a:hover {
 .service-page a:hover {
   text-decoration: underline;
 }
+/* Services List Cards */
+.service-card {
+  background-color: #ffffff; /* matches your section background */
+  border: 1px solid #ddd;   /* subtle border */
+  border-radius: 6px;        /* rounded corners */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* slight shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.service-card p {
+  margin: 0.4rem 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+
 /* estimator form styling */
 .estimator {
   background-color: #ffffff;
