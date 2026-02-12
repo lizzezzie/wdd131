@@ -39,14 +39,11 @@
   <section>
   <h2>Our Services</h2>
   <p>We offer a variety of laundry services to meet your needs:</p>
-  <ul>
-    <li>Wash & Fold -  from 90 Ksh/kg</li>
-    <li>Duvets & Bedding - priced by size and material</li>
-    <li>Stain Treatment - add-on service for delicate or tough stains</li>
-    <li>Ironing & Pressing - optional convinience service</li>
-    <li>Pickup & Delivery - optional convinience service</li>
-  </ul>
-  <p>Questions about our services or pricing? <a href="contact.html">Contact us</a> for more information.</p> 
+   <div id="service-list">
+   </div>
+
+  <p>Questions about our services or pricing?<br>
+    <a href="contact.html">Contact us</a> for more information.</p> 
   </section>
 
 <section class="estimator">
@@ -56,10 +53,15 @@
   <select id="service-select">
     <option value="">-- Choose a service --</option>
     <option value="Wash & Fold">Wash & Fold</option>
-    <option value="Wash, Dry & Iron">Wash & Iron</option>
+    <option value="Wash & Iron">Wash & Iron</option>
     <option value="Ironing Only">Ironing Only</option>
     <option value="Duvets & Bedding">Duvets & Bedding</option>
   </select>
+
+  <label for="weight">Weight(kg):</label>
+  <input type="number" id="weight" name="weight" min="0" placeholder="Enter Weight in kg">
+
+  <button id="calculate">Estimate</button>
 
   <p id="estimate-output"></p>
 </section>
