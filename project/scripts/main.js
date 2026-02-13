@@ -222,18 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (weightInput) {
-    weightInput.addEventListener("input", calculateEstimate);
-  }
-
-  if (qtyInput) {
-    qtyInput.addEventListener("input", calculateEstimate);
-  }
-
-  if (sizeSelect) {
-    sizeSelect.addEventListener("change", calculateEstimate);
-  }
-
+ 
   if (calculateBtn) {
     calculateBtn.addEventListener("click", calculateEstimate);
   }
