@@ -230,12 +230,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // contact form submit
   const contactForm = document.querySelector("#contact-form");
   if (contactForm) {
-    contactForm.addEventListener("submit", event => {
-      event.preventDefault();
-      const name = document.querySelector("#name").value;
-      const email = document.querySelector("#email").value;
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.querySelector("#name").value.trim();
+      const email = document.querySelector("#email").value.trim();
+      const message = document.querySelector("#message").value.trim();
+      if (!name || !email || !message) {
+        alert("Please complete all fields.");
+        return;
+      }
       saveContactInfo(name, email);
-      alert("Thank you for contacting Urban Spin. We will get back to you soon.");
+      alert(`Thank you ${name}. Your message has been received.`);
       contactForm.reset();
     });
   }
