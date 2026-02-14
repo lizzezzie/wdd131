@@ -229,18 +229,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // contact form submit
   const contactForm = document.querySelector("#contact-form");
+
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
+
       const name = document.querySelector("#name").value.trim();
       const email = document.querySelector("#email").value.trim();
+      const phone = document.querySelector("#phone").value.trim();
       const message = document.querySelector("#message").value.trim();
-      if (!name || !email || !message) {
-        alert("Please complete all fields.");
+      const feedback = document.querySelector("#form-feedbback");
+
+      feedback.textContent = ""; // clear previous feedback
+      feedback.style.color = "red"; // error color
+
+      if (!name || !email || !phone || !message) {
+        feedback.textContent = "Please complete all fields.";
         return;
       }
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        feedback.textContent = "Please enter a valid email address.";
+        return;
+      }
+      const phonePattern = /^\+?\d{7,15}$/;
+      if (!phonePattern.test(phone)) {
+        feedback.textContent = "Please enter a valid phone number (7-15 digits, optional +).";
+        return;
+      }
+
       saveContactInfo(name, email);
-      alert(`Thank you ${name}. Your message has been received.`);
+
+      feedback.style.color = "green";
+      feedback.textContent = `Thank you ${name}. We will get back to you within 24 hours.`;
       contactForm.reset();
     });
   }
