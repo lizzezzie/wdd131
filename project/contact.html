@@ -27,34 +27,68 @@
 </header>
 
 <main>
+  <h2>Get in Touch</h2>
+  <p>We typically respond within 24 hours during business days.</p>
 
-<section class="contact-info">
+
+<section class="contact-container">
+
+  <div class="contact-info">
+    <h3>Contact Us</h3>
   <h2>Contact Information</h2>
-  <p><strong>Phone:</strong> <a href="tel:0740347839">0740347839</a></p>
-  <p><strong>Email:</strong> <a href="mailto:urbanspinlaundryyy@gmail.com">urbanspinlaundryyy@gmail.com</a></p>
-</section>
+  <p><strong>Phone:</strong> 
+    <a href="tel:0740347839">0740347839</a>
+  </p>
+  <p><strong>Email:</strong> 
+    <a href="mailto:urbanspinlaundryyy@gmail.com">urbanspinlaundryyy@gmail.com</a>
+  </p>
+  <p><strong>Location:</strong><br>St Marys Nakuru<br>Behind Upper Hill Secondary School</p>
+  <p><strong>Operating Hours:</strong><br>
+    Monday - Friday: 8:00 AM - 7:00 PM<br>
+    Saturday: 9:00 AM - 6:00 PM<br>
+    Sunday: 9:00 AM - 5:00 PM
+  </p>
+  <p><strong>Follow Us:</strong><br>
+        <a href="https://www.tiktok.com/@urbanspinlaundrynakuru"
+           target="_blank"
+           rel="noopener">
+           Urban Spin Laundry Nakuru
+        </a>
+  </p>
+</div>
 
-<section>
+
+<div class="contact-form-wrapper">
   <h2>Send Us a Message</h2>
 
-  <form id="contact-form">
+  <form id="contact-form" novalidate>
+
     <div>
       <label for="name">Full Name</label><br>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required aria-require="true">
     </div>
+    <div>
+      <label for="phone">Phone Number</label><br>
+      <input type="tel" id="phone" name="phone" required aria-required="true">
+    </div>
+
 
     <div>
       <label for="email">Email Address</label><br>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required aria-required="true">
     </div>
 
     <div>
       <label for="message">Message</label><br>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
     </div>
 
     <button type="submit" class="button">Send Message</button>
+
+    <p id="form-feedbback" aria-live="polite"></p>
+    
   </form>
+</div>
 </section>
 
 </main>
