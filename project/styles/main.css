@@ -7,8 +7,11 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ===== Body and Topography ===== */
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -17,28 +20,40 @@ body {
   line-height: 1.6;
 }
 
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  margin: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* ===== Header and Navigation ===== */
 header {
   background-color: var(--primary-color);
   color: #ffffff;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
-
 header h1 {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
+}
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* ===== Hero Section ===== */
@@ -113,14 +128,23 @@ h2, h3 {
 }
 
 /* ===== Buttons ===== */
-.button {
+.button,
+button {
   display: inline-block;
   padding: 0.6rem 1rem;
   background-color: var(--accent-color);
-  color: #1f2a44;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* added transition for hover effect */
+}
+.button:hover,
+button:hover {
+  background-color: #27b861;
+  transform: translateY(-2px); /* subtle lift on hover */
 }
 
 /* ===== Footer ===== */
@@ -182,12 +206,12 @@ footer a:hover {
 }
 /* Services List Cards */
 .service-card {
-  background-color: #ffffff; /* matches your section background */
-  border: 1px solid #ddd;   /* subtle border */
-  border-radius: 6px;        /* rounded corners */
+  background-color: #ffffff;
+  border: 1px solid #ddd;   
+  border-radius: 6px;        
   padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* slight shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -283,7 +307,11 @@ footer a:hover {
 
 
 /* ===== Responsive Hero ===== */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+  } 
 
   .hero {
     height: 100vh;
@@ -308,11 +336,6 @@ footer a:hover {
 
   .hero-text h2 {
     color: #ffffff;
-  }
-
- /* hide hero card content on small screens */
-  .hero-text {
-    display: block;
   }
 }
 
