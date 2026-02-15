@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.querySelector("#email").value.trim();
       const phone = document.querySelector("#phone").value.trim();
       const message = document.querySelector("#message").value.trim();
-      const feedback = document.querySelector("#form-feedbback");
+      const feedback = document.querySelector("#form-feedback");
 
       feedback.textContent = ""; // clear previous feedback
       feedback.style.color = "red"; // error color
