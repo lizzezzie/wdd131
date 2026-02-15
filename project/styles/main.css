@@ -41,7 +41,14 @@ header {
 header h1 {
   margin-bottom: 0.5rem;
 }
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+}
 
+.logo:hover {
+  color: var(--accent-color);
+}
 nav ul {
   list-style: none;
   display: flex;
