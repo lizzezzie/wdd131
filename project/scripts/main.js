@@ -265,6 +265,15 @@ document.addEventListener("DOMContentLoaded", () => {
       contactForm.reset();
     });
   }
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("nav");
+
+  if (toggleBtn && nav) {
+   toggleBtn.addEventListener("click", () => {
+    nav.classList.toggle("open");
+   });
+}
+
 
   // initialize UI state for estimator
   updateEstimatorUI();
