@@ -8,21 +8,24 @@ const services = [
     minPerKg: 90,
     maxPerKg: 130,
     turnaround: "12 hours",
-    notes: "Price varies by fabric and stains. Range shown is typical."
+    notes: "Price varies by fabric and stains. Range shown is typical.",
+    image: "wash-fold.webp"
   },
   {
     name: "Wash & Iron",
     pricingModel: "perKg",
     pricePerKg: 150,
     turnaround: "12–24 hours",
-    notes: "Standard wash, dry and ironing service."
+    notes: "Standard wash, dry and ironing service.",
+    image: "wash-iron.webp"
   },
   {
     name: "Ironing Only",
     pricingModel: "perItem",
     pricePerItem: 100,
     turnaround: "Same day",
-    notes: "Per-item pricing. Large items charged separately."
+    notes: "Per-item pricing. Large items charged separately.",
+    image: "ironing-only.webp"
   },
   {
     name: "Duvets & Bedding",
@@ -33,7 +36,8 @@ const services = [
       king: 1000
     },
     turnaround: "1–3 days",
-    notes: "Price depends on size and material; quoted prices are typical."
+    notes: "Price depends on size and material; quoted prices are typical.",
+    image: "duvets-bedding.webp"
   }
 ];
 
