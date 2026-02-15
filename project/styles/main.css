@@ -354,5 +354,11 @@ nav.open {
   }
 
 }
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+}
+
 
 

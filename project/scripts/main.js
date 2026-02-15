@@ -1,5 +1,5 @@
 // =====================
-// SERVICES DATA (realistic models)
+// SERVICES DATA 
 // =====================
 const services = [
   {
@@ -61,6 +61,7 @@ function renderServices() {
 
     return `
       <div class="service-card">
+      <img src="images/${s.image}" alt="${s.name}" loading="lazy">
         <h3>${s.name}</h3>
         <p><strong>Price:</strong> ${priceText}</p>
         <p><strong>Turnaround:</strong> ${s.turnaround}</p>
@@ -113,8 +114,7 @@ function updateEstimatorUI() {
 }
 
 // =====================
-// CALCULATE ESTIMATE (live and on button)
-// uses template literals for output
+// CALCULATE ESTIMATE 
 // =====================
 function calculateEstimate() {
   const select = document.querySelector("#service-select");
@@ -186,7 +186,7 @@ function calculateEstimate() {
 }
 
 // =====================
-// CONTACT FORM STORAGE (unchanged, defensive)
+// CONTACT FORM STORAGE 
 // =====================
 function saveContactInfo(name, email) {
   localStorage.setItem("urbanSpinName", name);
@@ -204,7 +204,7 @@ function loadContactInfo() {
 }
 
 // =====================
-// INIT / Event wiring
+// INIT
 // =====================
 document.addEventListener("DOMContentLoaded", () => {
   // render services if the list container exists
@@ -212,13 +212,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // load contact info on contact page
   loadContactInfo();
 
-  // estimator UI wiring (defensive)
+  // estimator UI wiring 
   const serviceSelect = document.querySelector("#service-select");
   const weightInput = document.querySelector("#weight");
   const qtyInput = document.querySelector("#quantity");
   const sizeSelect = document.querySelector("#size-select");
   const calculateBtn = document.querySelector("#calculate");
-
+  
   if (serviceSelect) {
     serviceSelect.addEventListener("change", () => {
       updateEstimatorUI();
