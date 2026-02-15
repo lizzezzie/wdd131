@@ -320,13 +320,6 @@ footer a:hover {
 
 
 /* estimator form styling */
-.estimator {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
 .estimator label {
   display: block;
@@ -402,9 +395,6 @@ footer a:hover {
   .hero {
     height: 100vh;
     overflow: hidden;
-  }
-  .hero-text h2 {
-    font-size: 2rem;
   }
   .hero-text p {
     font-size: 1rem;
