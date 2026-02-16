@@ -328,6 +328,20 @@ textarea {
 .contact-info a:hover {
   color: #084f99;
 }
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
 
 
 /* =========================================
