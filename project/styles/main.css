@@ -133,6 +133,25 @@ nav a.active::after {
   background-color: var(--white);
   color: var(--primary-color);
 }
+/* =====================
+   Estimator Button
+===================== */
+#calculate {
+  display: inline-block;       
+  width: 100%;                           
+  padding: 0.8rem 1.5rem;      
+  border-radius: var(--radius);
+  font-weight: 600;
+  background-color: #253003;
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#calculate:hover {
+  opacity: 0.9;
+}
 
 
 /* =====================================================
