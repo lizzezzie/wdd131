@@ -458,69 +458,118 @@ footer a {
   text-decoration: none;
 }
 
-/* ==============================
-   Responsive Navigation
-============================== */
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
+/* =====================================================
+   HEADER & NAVIGATION
+===================================================== */
+header {
+  background-color: var(--primary-color);
   color: var(--white);
-  cursor: pointer;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;   /* stack logo, hamburger, nav vertically on mobile */
+  align-items: flex-start;
 }
 
-/* Mobile first */
+.logo {
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.nav-toggle {
+  display: block;           /* show hamburger on mobile */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+  align-self: flex-end;     /* push hamburger to the right */
+  margin-bottom: 1rem;      /* space below hamburger */
+}
+
 nav {
-  display: none;
+  display: none;            /* hidden by default on mobile */
   width: 100%;
 }
 
 nav.open {
-  display: block;
+  display: block;           /* shown when hamburger toggled */
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;   /* vertical links on mobile */
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
 
-/* Large screens */
+nav a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+/* Hover underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  transform: scaleX(1);
+}
+
+/* =====================================================
+   Desktop Layout
+===================================================== */
 @media (min-width: 768px) {
+  header {
+    flex-direction: row;    /* logo + nav side by side */
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .nav-toggle {
-    display: none;
+    display: none;          /* hide hamburger on desktop */
   }
 
   nav {
-    display: flex;
+    display: flex;          /* always show nav on desktop */
     width: auto;
   }
 
   nav ul {
-    flex-direction: row;
-    margin-top: 0;
-  }
-  .nav-toggle {
-    display: none;
-  }
-
-  #services-list .service-card {
-    display: grid;
-    grid-template-columns: 260px 1fr;
+    flex-direction: row;    /* horizontal links */
     gap: 2rem;
+  }
+
+  nav a {
+    padding: 0;
+  }
+  .contact-container {
+    grid-template-columns: 1fr 1fr;  /* two equal columns on wide viewports */
     align-items: start;
   }
 
-  #services-list .service-card img {
-    margin-bottom: 0;  
+  /* Ensures children stretch evenly */
+  .contact-info,
+  .contact-form-wrapper {
+    width: 100%;   /* let grid handle sizing */
   }
-   /* contact page- Two column layout on larger screens */
-  .contact-container {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
+
 
 }
-
-
-
-
-
