@@ -253,8 +253,6 @@ nav {
    6. SERVICES CARDS
 ===================================================== */
 
-
-
 .service-card {
   background-color: var(--light-bg);
   padding: 2rem;
@@ -346,7 +344,6 @@ textarea {
   padding: 0 1.5rem;
 }
 
-
 /* =========================================
    CONTACT INFO SIDE
 ========================================= */
@@ -382,8 +379,6 @@ textarea {
   flex-shrink: 0;
   margin-top: 4px;
 }
-
-
 
 /* =========================================
    FORM WRAPPER (Card Look)
