@@ -197,11 +197,25 @@ function loadContactInfo() {
   const nameField = document.querySelector("#name");
   const emailField = document.querySelector("#email");
 
-  if (!nameField || !emailField) return;
+  if (!nameField || !emailField) {
 
   nameField.value = localStorage.getItem("urbanSpinName") || "";
   emailField.value = localStorage.getItem("urbanSpinEmail") || "";
+  }
 }
+const contactForm = document.querySelector("#contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    const name = document.querySelector("#name").value;
+    const email = document.querySelector("#email").value;
+    saveContactInfo(name, email);
+    const feedback = document.querySelector("#form-feedback");
+    feedback.textContent = `Thank you ${name}. We will get back to you within 24 hours.`;
+    feedback.className = "success-msg";
+  });
+}
+
+
 
 // =====================
 // INIT
