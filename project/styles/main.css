@@ -235,17 +235,31 @@ nav {
 
 
 /* =====================================================
-   6. SERVICES CARDS
+   6. SERVICES GRID & CARDS 
 ===================================================== */
 
+/* Fix images */
+#services-list {
+  display: grid;
+  /* Automatically creates columns: min 320px, max fills space */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none; 
+}
+
 .service-card {
+  display: flex;
+  flex-direction: column; /* Stacks content vertically inside card */
   background-color: var(--light-bg);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
- 
+  height: 100%; /* Ensures all cards in a row have equal height */
 }
+
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
@@ -253,21 +267,29 @@ nav {
 
 .service-card img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: 220px; /* prevents "giant" images on desktop */
+  object-fit: cover; /* Crops image to fit the box without stretching */
   border-radius: 10px;
-  display: block;
   margin-bottom: 1rem;
 }
 
 .service-card h3 {
   margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
 }
 
 .service-card p {
-  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
+
+/*Ensures the last paragraph (notes) stays at the bottom */
+.service-card p:last-of-type {
+  margin-top: auto; 
+  font-style: italic;
+  opacity: 0.8;
+}
+
 
 /* =====================================================
     FORMS
