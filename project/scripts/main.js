@@ -221,88 +221,64 @@ if (contactForm) {
 // INIT
 // =====================
 document.addEventListener("DOMContentLoaded", () => {
-  // render services if the list container exists
+  // 1. Render services (Only runs if #services-list exists)
   renderServices();
-  // load contact info on contact page
+  
+  // 2. Load contact info (Only runs if fields exist)
   loadContactInfo();
 
-  // estimator UI wiring 
-  const serviceSelect = document.querySelector("#service-select");
-  const weightInput = document.querySelector("#weight");
-  const qtyInput = document.querySelector("#quantity");
-  const sizeSelect = document.querySelector("#size-select");
-  const calculateBtn = document.querySelector("#calculate");
-  
-  if (serviceSelect) {
-    serviceSelect.addEventListener("change", () => {
-      updateEstimatorUI();
-      calculateEstimate(); // update immediately when service changes
+  // 3. NAVIGATION TOGGLE 
+  const navBtn = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector("nav");
+  if (navBtn && navMenu) {
+    navBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      // Changes the hamburger ☰ to an ✕ when open
+      navBtn.textContent = navMenu.classList.contains("open") ? "✕" : "☰";
     });
   }
 
- 
+  // 4. ESTIMATOR WIRING (Only runs if estimator exists)
+  const serviceSelect = document.querySelector("#service-select");
+  const calculateBtn = document.querySelector("#calculate");
+  if (serviceSelect) {
+    serviceSelect.addEventListener("change", () => {
+      updateEstimatorUI();
+      calculateEstimate(); 
+    });
+  }
   if (calculateBtn) {
     calculateBtn.addEventListener("click", calculateEstimate);
   }
 
-  // contact form submit
+  // 5. CONTACT FORM 
   const contactForm = document.querySelector("#contact-form");
-
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const name = document.querySelector("#name").value.trim();
-      const email = document.querySelector("#email").value.trim();
-      const phone = document.querySelector("#phone").value.trim();
-      const message = document.querySelector("#message").value.trim();
+      const nameInput = document.querySelector("#name");
+      const emailInput = document.querySelector("#email");
       const feedback = document.querySelector("#form-feedback");
 
-      feedback.textContent = ""; // clear previous feedback
-      feedback.style.color = "red"; // error color
+      if (nameInput && emailInput) {
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
 
-      if (!name || !email || !phone || !message) {
-        feedback.textContent = "Please complete all fields.";
-        return;
+        if (name && email) {
+          // Save to LocalStorage
+          saveContactInfo(name, email);
+          
+          // DOM Modification
+          feedback.textContent = `Thank you, ${name}. We've saved your details and will reply within 24 hours!`;
+          feedback.style.color = "green";
+          contactForm.reset();
+        } else {
+          feedback.textContent = "Please fill in all required fields.";
+          feedback.style.color = "red";
+        }
       }
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        feedback.textContent = "Please enter a valid email address.";
-        return;
-      }
-      const phonePattern = /^\+?\d{7,15}$/;
-      if (!phonePattern.test(phone)) {
-        feedback.textContent = "Please enter a valid phone number (7-15 digits, optional +).";
-        return;
-      }
-
-      saveContactInfo(name, email);
-
-      feedback.style.color = "green";
-      feedback.textContent = `Thank you ${name}. We will get back to you within 24 hours.`;
-      contactForm.reset();
     });
   }
-  const toggleBtn = document.querySelector(".nav-toggle");
-  const nav = document.querySelector("nav");
-
-  if (toggleBtn && nav) {
-   toggleBtn.addEventListener("click", () => {
-    nav.classList.toggle("open");
-   });
-}
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  setupNavigation();
-  renderServices();
-  loadContactInfo();
-
-const serviceSelect = document.querySelector("#service-select");
-if (serviceSelect) {
-  serviceSelect.addEventListener("change", () => {
-  updateEstimatorUI();
-  calculateEstimate();
-  });
-}
 });
+
