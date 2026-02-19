@@ -60,13 +60,13 @@ function renderServices() {
             : "Varies";
 
     return `
-      <div class="service-card">
+      <article class="service-card">
       <img src="images/${s.image}" alt="${s.name}" loading="lazy">
         <h3>${s.name}</h3>
         <p><strong>Price:</strong> ${priceText}</p>
         <p><strong>Turnaround:</strong> ${s.turnaround}</p>
         <p>${s.notes}</p>
-      </div>
+      </article>
     `;
   }).join("");
 }

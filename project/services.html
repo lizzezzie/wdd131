@@ -16,8 +16,8 @@
 <body>
 
 <header>
-  <h1><a href="index.html" class="logo">Urban Spin Laundry</a></h1>
-  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <h1><a href="index.html" class="logo" aria-label="Urban Spin Home">Urban Spin Laundry</a></h1>
+  <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -80,16 +80,27 @@
     </select>
   </div>
 
-  <button id="calculate" type="button">Estimate</button>
+  <button id="calculate" class="btn btn-primary btn-full" type="button">Estimate</button>
 
   <p id="estimator-note" aria-live="polite"></p>
   <p id="estimate-output" aria-live="polite"></p>
 </section>
 
+  <section class="cta-section">
+  <h3>Do you have questions about our services?</h3>
+  <p>Contact us <br>
+    <a href="contact.html" class="btn btn-primary" rel="noopener">
+           Here
+        </a></p>
+  </section>
+
 
 </main>
 
 <footer>
+  <p><strong>Urban Spin Laundry</strong><br>
+    St Mary's, Next PCEA Church, Behind space & 7D, Nakuru, Kenya<br>
+    Phone: <a href="tel:0740347839">0740347839</a><br>
   <p>&copy; 2026 Urban Spin Laundry</p>
   
 </footer>

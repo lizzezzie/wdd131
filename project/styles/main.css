@@ -129,61 +129,45 @@ nav {
   BUTTONS
 ===================================================== */
 
-.button {
-  padding: 1rem 1.5rem;
-  border-radius: 30px;
-  border: none;
-  background-color: #253003;
-  color: white;
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  font-family: inherit;
   font-weight: 600;
+  text-decoration: none;
+  text-align: center;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  width: auto;
 }
-.button:hover {
-  background-color: #b3b363;
+.btn-primary {
+  background-color: #253003;
+  color: var(--white);
+}
+.btn-secondary {
+  border-color: var(--white);
+  color: var(--white);
+  background-color: transparent;
+}
+.btn-full {
+  width: 100%;
+}
+.btn:hover {
+  background-color: #3d4f05;
+  color: var(--white);
   transform: translateY(-2px);
 }
-.button:active {
-  transform: translateY(0);
-}
-
-.primary-btn {
-  background-color: transparent;
-  border: 2px solid var(--white);
-  color: var(--white);
-}
-
-.primary-btn:hover {
-  opacity: 0.9;
-}
-
-.secondary-btn {
-  background-color: transparent;
-  border: 2px solid var(--white);
-  color: var(--white);
-}
-
-.secondary-btn:hover {
+.btn-secondary:hover {
   background-color: var(--white);
   color: var(--primary-color);
 }
-/*Estimator Button */
-#calculate {
-  display: inline-block;       
-  width: 100%;                           
-  padding: 0.8rem 1.5rem;      
-  border-radius: var(--radius);
-  font-weight: 900;
-  background-color: #253003;
-  color: var(--white);
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s ease;
+
+.btn:active {
+  transform: translateY(0);
 }
 
-#calculate:hover {
-  opacity: 0.9;
-}
 
 
 /* =====================================================
