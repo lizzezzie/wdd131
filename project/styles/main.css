@@ -9,6 +9,7 @@
   --white: #ffffff;
   --max-width: 1200px;
   --radius: 8px;
+  --success-color: #10b981;
 }
 
 
@@ -299,6 +300,18 @@ select {
 textarea {
   resize: vertical;
 }
+
+/*sucess message styling*/
+.success-msg {
+  color: var(--success-color);
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--success-color);
+  border-radius: var(--radius);
+  background-color: #ecfdf5;
+}
+
 /* ========================================
    CONTACT PAGE
 ======================================== */
