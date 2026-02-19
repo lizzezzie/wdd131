@@ -197,7 +197,7 @@ function loadContactInfo() {
   const nameField = document.querySelector("#name");
   const emailField = document.querySelector("#email");
 
-  if (!nameField || !emailField) {
+  if (!nameField && !emailField) {
 
   nameField.value = localStorage.getItem("urbanSpinName") || "";
   emailField.value = localStorage.getItem("urbanSpinEmail") || "";
