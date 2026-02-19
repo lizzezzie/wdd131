@@ -293,6 +293,16 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 
-  // initialize UI state for estimator
+document.addEventListener("DOMContentLoaded", () => {
+  setupNavigation();
+  renderServices();
+  loadContactInfo();
+
+const serviceSelect = document.querySelector("#service-select");
+if (serviceSelect) {
+  serviceSelect.addEventListener("change", () => {
   updateEstimatorUI();
+  calculateEstimate();
+  });
+}
 });
